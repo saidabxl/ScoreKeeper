@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the penalt Team A.
+     * Displays the Penalty Team A.
      */
     public void teamAPenalty(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_penalty);
@@ -155,13 +155,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the penalt Team A.
+     * Displays the Penalty Team A.
      */
     public void teamBPenalty(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_penalty);
         scoreView.setText(String.valueOf(score));
     }
 
+
+    /**
+     * This method reset all points and all games when the reset all button click.
+     */
     public void resetScore(View v) {
         goalsTeamA = 0;
         goalsTeamB = 0;
