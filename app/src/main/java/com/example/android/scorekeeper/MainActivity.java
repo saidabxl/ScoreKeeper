@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     int redCardTeamB = 0;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given goals for TeamA.
      */
+
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_goal);
         scoreView.setText(String.valueOf(score));
