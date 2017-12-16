@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/foot">
+    android:padding="@dimen/my_default_padding"
+    android:background="#558B2F"
+    tools:context="com.example.android.scorekeeper.MainActivity">
 
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/fball"
+    android:scaleType="centerCrop"
+    android:contentDescription="@string/image"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
 
         <!-- Team A -->
@@ -27,6 +34,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+
             <TextView
                 android:id="@+id/teamNameA"
                 android:hint="teamA"
@@ -37,6 +45,7 @@
                 android:gravity="center"
                 android:text="@string/teamA"
                 android:textColor="#FF9800"
+                android:background="@drawable/bg1"
                 android:textSize="21sp" />
 
             <TextView
@@ -47,7 +56,8 @@
                 android:gravity="center"
                 android:text="@string/scoreTeamA"
                 android:textColor="#FF9800"
-                android:textSize="30sp" />
+                android:textStyle="bold"
+                android:textSize="21sp" />
 
 
 
@@ -55,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg1"
+                android:background="#558B2F"
                 android:onClick="goalsTeamA"
                 android:text="@string/goalsTeamA"
                 android:textColor="#FF9800" />
@@ -65,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg1"
+                android:background="#558B2F"
                 android:gravity="center"
                 android:onClick="teamAPenalty"
                 android:text="@string/TeamAPenalty" />
@@ -122,7 +132,8 @@
                 android:gravity="center"
                 android:text="@string/teamB"
                 android:textColor="#558B2F"
-                android:textSize="21sp" />
+                android:textSize="21sp"
+                android:background="@drawable/bg1"/>
 
             <TextView
                 android:id="@+id/team_b_goal"
@@ -131,14 +142,15 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/scoreTeamB"
-                android:textColor="#C6FF00"
-                android:textSize="30sp" />
+                android:textColor="#558B2F"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg1"
+                android:background="#558B2F"
                 android:onClick="goalForTeamB"
                 android:text="@string/goalsTeamB"
                 android:textColor="#C6FF00" />
@@ -149,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg1"
+                android:background="#558B2F"
                 android:onClick="teamBPenalty"
                 android:text="@string/TeamBPenalty" />
 
@@ -180,44 +192,27 @@
     </LinearLayout>
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-
-        </LinearLayout>
-
-
         <RelativeLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+
             android:layout_marginTop="1dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="26dp"
+                android:layout_marginTop="26dp"
                 android:onClick="resetScore"
                 android:text="reset" />
-
 
         </RelativeLayout>
 
 
-    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
 
 

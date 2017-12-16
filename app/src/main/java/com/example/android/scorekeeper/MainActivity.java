@@ -199,8 +199,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void resetScore(View v) {
-        goalsTeamA = 0;
-        goalsTeamB = 0;
+        goalsTeamA = 3;
+        goalsTeamB = 2;
         teamAPenalty = 0;
         teamBPenalty = 0;
         yellowCardTeamA = 0;
@@ -208,8 +208,8 @@ public class MainActivity extends AppCompatActivity {
         redCardTeamA = 0;
         redCardTeamB = 0;
 
-        displayForTeamA(0);
-        displayForTeamB(0);
+        displayForTeamA(3);
+        displayForTeamB(2);
         yellowForTeamA(0);
         yellowForTeamB(0);
         redForTeamA(0);

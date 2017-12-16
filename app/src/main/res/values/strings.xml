@@ -16,6 +16,7 @@
     <string name="redCardTeamB">Red Card</string>
     <string name="TeamAPenalty">Penalty</string>
     <string name="TeamBPenalty">Penalty</string>
+    <string name="image">image</string>
 
 </resources>
 
