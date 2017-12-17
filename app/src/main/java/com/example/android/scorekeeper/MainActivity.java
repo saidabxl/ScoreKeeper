@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
         TextView redCardForTeamB = findViewById(R.id.team_b_red_card);
 
 
-
     }
 
 
