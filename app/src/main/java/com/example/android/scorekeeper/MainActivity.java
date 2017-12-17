@@ -7,7 +7,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    /**
+     * Define a String Variable for User Input
+     */
     int goalsTeamA = 3;
     int goalsTeamB = 2;
     int teamAPenalty = 0;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String KEY_redCardTeamB = "redCardTeamB";
 
 
+    //use that key while saving the data to savedInstance
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
