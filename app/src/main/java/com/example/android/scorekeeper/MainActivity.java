@@ -7,8 +7,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int goalsTeamA = 0;
-    int goalsTeamB = 0;
+
+    // Saves the scores of both teams in case activity changes
+
+    static final String KEY_TEAM_A = "goalsTeamA";
+    static final String KEY_TEAM_B = "goalsTeamB";
+    static final String KEY_PENALTY_A = "teamAPenalty";
+    static final String KEY_PENALTY_B = "teamBPenalty";
+    static final String KEY_YCA = "yellowCardTeamA";
+    static final String KEY_YCB = "yellowCardTeamB";
+    static final String KEY_RCA = "redCardTeamA";
+    static final String KEY_RCB = "redCardTeamB";
+
+
+    int goalsTeamA = 3;
+    int goalsTeamB = 2;
     int teamAPenalty = 0;
     int teamBPenalty = 0;
     int yellowCardTeamA = 0;
@@ -21,15 +34,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        TextView goalsTeamA = ( TextView ) findViewById(R.id.team_a_goal);
+        TextView goalsTeamB = (TextView) findViewById(R.id.team_b_goal);
+        TextView teamAPenalty = (TextView) findViewById(R.id.team_a_penalty);
+        TextView teamBPenalty = (TextView) findViewById(R.id.team_b_penalty);
+        TextView yellowCardTeamA = (TextView) findViewById(R.id.team_a_yellow_card);
+        TextView yellowCardTeamB = (TextView) findViewById(R.id.team_b_yellow_card);
+        TextView redCardTeamA = (TextView) findViewById(R.id.team_a_red_card);
+        TextView redCardTeamB = (TextView) findViewById(R.id.team_b_red_card);
+
     }
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt("teamA", goalsTeamA);
-        savedInstanceState.putInt("teamB", goalsTeamB);
-        savedInstanceState.putInt("PenaltyA", teamAPenalty);
-        savedInstanceState.putInt("PenaltyB", teamBPenalty);
+        savedInstanceState.putInt("TEAM_A", goalsTeamA);
+        savedInstanceState.putInt("TEAM_B", goalsTeamB);
+        savedInstanceState.putInt("PENALTY_A", teamAPenalty);
+        savedInstanceState.putInt("PENALTY_B", teamBPenalty);
         savedInstanceState.putInt("YCA", yellowCardTeamA);
         savedInstanceState.putInt("YCB", yellowCardTeamB);
         savedInstanceState.putInt("RCA", redCardTeamA);
@@ -39,17 +63,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        int goalsTeamA = savedInstanceState.getInt("teamA");
-        int goalsTeamB = savedInstanceState.getInt("teamB");
-        int teamAPenalty = savedInstanceState.getInt("PenaltyA");
-        int teamBPenalty = savedInstanceState.getInt("PenaltyB");
+        int goalsTeamA = savedInstanceState.getInt("TEAM_A");
+        int goalsTeamB = savedInstanceState.getInt("TEAM_B");
+        int teamAPenalty = savedInstanceState.getInt("PENALTY_A");
+        int teamBPenalty = savedInstanceState.getInt("PENALTY_B");
         int yellowCardTeamA = savedInstanceState.getInt("YCA");
         int yellowCardTeamB = savedInstanceState.getInt("YCB");
         int redCardTeamA = savedInstanceState.getInt("RCA");
         int redCardTeamB = savedInstanceState.getInt("RCB");
 
-        displayForTeamA(0);
-        displayForTeamB(0);
+        displayForTeamA(3);
+        displayForTeamB(2);
         yellowForTeamA(0);
         yellowForTeamB(0);
         redForTeamA(0);

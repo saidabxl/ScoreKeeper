@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#558B2F"
     android:orientation="vertical"
-    android:padding="@dimen/my_default_padding"
+    android:padding="@dimen/margin_padding_16"
     tools:context="com.example.android.scorekeeper.MainActivity">
 
     <ImageView
@@ -29,8 +31,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginLeft="@dimen/margin_24"
+            android:layout_marginRight="@dimen/margin_24"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -39,14 +41,14 @@
                 android:id="@+id/teamNameA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/marginTop"
                 android:background="@drawable/bg1"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:hint="teamA"
+                android:hint="@string/teamA"
                 android:text="@string/teamA"
-                android:textColor="#FF9800"
-                android:textSize="21sp" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_score" />
 
             <TextView
                 android:id="@+id/team_a_goal"
@@ -55,26 +57,26 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/scoreTeamA"
-                android:textColor="#FF9800"
-                android:textSize="21sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_score"
                 android:textStyle="bold" />
 
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="#558B2F"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/back"
                 android:onClick="goalsTeamA"
                 android:text="@string/goalsTeamA"
-                android:textColor="#FF9800" />
+                android:textColor="@color/colorPrimary" />
 
             <Button
                 android:id="@+id/team_a_penalty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="#558B2F"
+                android:background="@color/back"
                 android:gravity="center"
                 android:onClick="teamAPenalty"
                 android:text="@string/PenaltyA" />
@@ -84,10 +86,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="#FFEB3B"
+                android:background="@color/backg"
                 android:onClick="yellowCardForTeamA"
                 android:text="@string/YCA"
-                android:textColor="#000000" />
+                android:textColor="@color/textColor1" />
 
             <Button
                 android:id="@+id/team_a_red_card"
@@ -95,17 +97,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="4dp"
-                android:background="#F44336"
+                android:background="@color/backgr"
                 android:onClick="redCardForTeamA"
                 android:text="@string/RCA"
-                android:textColor="#000000" />
+                android:textColor="@color/text3" />
         </LinearLayout>
 
         <TextView
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
-            android:background="#00B0FF" />
+            android:background="@color/background" />
 
 
         <!-- Team B -->
@@ -113,23 +115,24 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginLeft="@dimen/marginLeft"
+            android:layout_marginRight="@dimen/marginRight"
             android:layout_weight="1"
             android:orientation="vertical">
 
 
             <TextView
-                android:id="@+id/teamNameB"
+                android:id="@+id/teamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/marginTop"
                 android:background="@drawable/bg1"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
+                android:hint="@string/teamB"
                 android:text="@string/teamB"
-                android:textColor="#558B2F"
-                android:textSize="21sp" />
+                android:textColor="@color/back"
+                android:textSize="@dimen/text_size_team_name" />
 
             <TextView
                 android:id="@+id/team_b_goal"
@@ -139,25 +142,25 @@
                 android:gravity="center"
                 android:text="@string/scoreTeamB"
                 android:textColor="#558B2F"
-                android:textSize="21sp"
+                android:textSize="@dimen/text_size_score"
                 android:textStyle="bold" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="#558B2F"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/back"
                 android:onClick="goalForTeamB"
                 android:text="@string/goalsTeamB"
-                android:textColor="#C6FF00" />
+                android:textColor="@color/text2" />
 
             <Button
                 android:id="@+id/team_b_penalty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:background="#558B2F"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/back"
                 android:onClick="teamBPenalty"
                 android:text="@string/PenaltyB" />
 
@@ -165,11 +168,11 @@
                 android:id="@+id/team_b_yellow_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="#FFEB3B"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/backg"
                 android:onClick="yellowCardForTeamB"
                 android:text="@string/YCB"
-                android:textColor="#000000" />
+                android:textColor="@color/text3" />
 
             <Button
                 android:id="@+id/team_b_red_card"
@@ -177,11 +180,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="8dp"
-                android:layout_marginTop="4dp"
-                android:background="#F44336"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/backgr"
                 android:onClick="redCardForTeamB"
                 android:text="@string/RCB"
-                android:textColor="#000000" />
+                android:textColor="@color/text3" />
         </LinearLayout>
 
 
@@ -192,18 +195,19 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="1dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="26dp"
+            android:layout_marginBottom="@dimen/marginBottom"
             android:layout_marginTop="26dp"
             android:onClick="resetScore"
-            android:text="reset" />
+            android:text="@string/reset" />
 
     </RelativeLayout>
 
