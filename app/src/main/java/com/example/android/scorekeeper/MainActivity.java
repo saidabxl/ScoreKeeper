@@ -32,11 +32,8 @@ public class MainActivity extends AppCompatActivity {
     int redCardTeamB = 0;
 
 
-    //use the same key to retrieve the data back
-    private TextView goalsTeamAText;
-
-
     //use that key while saving the data to savedInstance
+    private TextView goalsTeamAText;
     private TextView goalsTeamBText;
     private TextView teamAPenaltyText;
     private TextView teamBPenaltyText;
@@ -44,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView yellowForTeamBText;
     private TextView redForTeamAText;
     private TextView redCardForTeamBText;
+
+    //use the same key to retrieve the data back
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //use that key while saving the data to savedInstance
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Add Goals for TeamA
+     * Add Goals for Team A
      */
     public void goalsTeamA(View v) {
         goalsTeamA = goalsTeamA + 1;
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given goals for TeamA.
+     * Displays the given goals for Team A
      */
 
     public void displayForTeamA(int goalsTeamA) {
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add Goals for TeamB
+     * Add Goals for Team B
      */
     public void goalForTeamB(View v) {
         goalsTeamB = goalsTeamB + 1;
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given goals for TeamB.
+     * Displays the given goals for Team B
      */
     public void displayForTeamB(int goalsTeamB) {
         //TextView scoreView = (goalsTeamBText)findViewById(R.id.team_b_goal);
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Add Penalty Card for TeamA
+     * Add Penalty  for Team A
      */
     public void teamAPenalty(View v) {
         teamAPenalty = teamAPenalty + 1;
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the Penalty TeamA.
+     * Displays the Penalty Team A
      */
     public void teamAPenalty(int teamAPenalty) {
         //TextView teamAPenalty = (teamAPenaltyText) findViewById(R.id.team_a_penalty);
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add Penalty for TeamB
+     * Add Penalty for Team B
      */
     public void teamBPenalty(View v) {
         teamBPenalty = teamBPenalty + 1;
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the Penalty TeamB.
+     * Displays the Penalty Team B
      */
     public void teamBPenalty(int teamBPenalty) {
         //TextView teamBPenalty = (teamBPenaltyText)findViewById(R.id.team_b_penalty);
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add Yellow Card for TeamA
+     * Add Yellow Card for Team A
      */
     public void yellowCardForTeamA(View v) {
         yellowCardTeamA = yellowCardTeamA + 1;
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the given yellow cards for TeamA.
+     * Displays the given yellow cards for Team A
      */
     public void yellowForTeamA(int yellowCardTeamA) {
         //TextView scoreView = (yellowForTeamAText)findViewById(R.id.team_a_yellow_card);
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Add Yellow Card for TeamB
+     * Add Yellow Card for Team B
      */
     public void yellowCardForTeamB(View v) {
         yellowCardTeamB = yellowCardTeamB + 1;
@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given yellow cards for TeamB.
+     * Displays the given yellow cards for Team B
      */
     public void yellowForTeamB(int yellowForTeamB) {
         //TextView yellowForTeamB = (yellowForTeamBText) findViewById(R.id.team_b_yellow_card);
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add red card for TeamA
+     * Add red card for Team A
      */
     public void redCardForTeamA(View v) {
         redCardTeamA = redCardTeamA + 1;
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given red cards for TeamA.
+     * Displays the given red cards for Team A
      */
     public void redForTeamA(int redForTeamA) {
         //TextView redForTeamA = (redForTeamAText) findViewById(R.id.team_a_red_card);
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add red card for TeamB
+     * Add red card for Team B
      */
     public void redCardForTeamB(View v) {
         redCardTeamB = redCardTeamB + 1;
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given red cards for TeamB.
+     * Displays the given red cards for Team B
      */
     public void redCardForTeamB(int redCardForTeamB) {
         //TextView redCardForTeamB = (redCardForTeamBText) findViewById(R.id.team_b_red_card);
