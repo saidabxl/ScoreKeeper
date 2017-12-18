@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         redForTeamA(redCardTeamA);
         redCardForTeamB(redCardTeamB);
         teamAPenalty(teamAPenalty);
-        teamBPenalty(teamAPenalty);
+        teamBPenalty(teamBPenalty);
 
     }
 
