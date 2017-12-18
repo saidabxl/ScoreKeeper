@@ -64,17 +64,9 @@ public class MainActivity extends AppCompatActivity {
     int redCardTeamB = 0;
 
 
-    //use that key while saving the data to savedInstance
-    TextView goalsTeamAText;
 
-    //use the same key to retrieve the data back
-    TextView goalsTeamBText;
-    TextView teamAPenaltyText;
-    TextView teamBPenaltyText;
-    TextView yellowForTeamAText;
-    TextView yellowForTeamBText;
-    TextView redForTeamAText;
-    TextView redCardForTeamBText;
+
+    //use that key while saving the data to savedInstance
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -88,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("redCardTeamA", redCardTeamA);
         savedInstanceState.putInt("redCardTeamB", redCardTeamB);
     }
+
+
+    //use the same key to retrieve the data back
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -112,6 +107,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    TextView goalsTeamAText;
+    TextView goalsTeamBText;
+    TextView teamAPenaltyText;
+    TextView teamBPenaltyText;
+    TextView yellowForTeamAText;
+    TextView yellowForTeamBText;
+    TextView redForTeamAText;
+    TextView redCardForTeamBText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Add Goals for TeamA
+     * Add score for Team A
      */
     public void goalsTeamA(View v) {
         goalsTeamA = goalsTeamA + 1;
@@ -141,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given goals for TeamA.
+     * Displays the score for Team A
      */
 
     public void displayForTeamA(int goalsTeamA) {
@@ -149,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add Goals for TeamB
+     * Add score for Team B
      */
     public void goalForTeamB(View v) {
         goalsTeamB = goalsTeamB + 1;
@@ -157,77 +162,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given goals for TeamB.
+     * Displays score for Team B
      */
     public void displayForTeamB(int goalForTeamB) {
         goalsTeamBText.setText(String.valueOf(goalForTeamB));
     }
 
     /**
-     * Add Yellow Card for TeamA
-     */
-    public void yellowCardForTeamA(View v) {
-        yellowCardTeamA = yellowCardTeamA + 1;
-        yellowForTeamA(yellowCardTeamA);
-    }
-
-
-    /**
-     * Displays the given yellow cards for TeamA.
-     */
-    public void yellowForTeamA(int yellowCardForTeamA) {
-        yellowForTeamAText.setText(String.valueOf(yellowCardForTeamA));
-    }
-
-
-    /**
-     * Add Yellow Card for TeamB
-     */
-    public void yellowCardForTeamB(View v) {
-        yellowCardTeamB = yellowCardTeamB + 1;
-        yellowForTeamB(yellowCardTeamB);
-    }
-
-    /**
-     * Displays the given yellow cards for TeamB.
-     */
-    public void yellowForTeamB(int yellowCardForTeamB) {
-        yellowForTeamBText.setText(String.valueOf(yellowCardForTeamB));
-    }
-
-    /**
-     * Add red card for TeamA
-     */
-    public void redCardForTeamA(View v) {
-        redCardTeamA = redCardTeamA + 1;
-        redForTeamA(redCardTeamA);
-    }
-
-    /**
-     * Displays the given red cards for TeamA.
-     */
-    public void redForTeamA(int redCardForTeamA) {
-        redForTeamAText.setText(String.valueOf(redCardForTeamA));
-    }
-
-    /**
-     * Add red card for TeamB
-     */
-    public void redCardForTeamB(View v) {
-        redCardTeamB = redCardTeamB + 1;
-        redCardForTeamB(redCardTeamB);
-    }
-
-    /**
-     * Displays the given red cards for TeamB.
-     */
-    public void redCardForTeamB(int redCardForTeamB) {
-        redCardForTeamBText.setText(String.valueOf(redCardForTeamB));
-    }
-
-
-    /**
-     * Add Penalty Card for TeamA
+     * Add Penalty for Team A
      */
     public void teamAPenalty(View v) {
         teamAPenalty = teamAPenalty + 1;
@@ -236,14 +178,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the Penalty TeamA.
+     * Displays the Penalty for Team A
      */
     public void teamAPenalty(int teamAPenalty) {
         teamAPenaltyText.setText(String.valueOf(teamAPenalty));
     }
 
     /**
-     * Add Penalty for TeamB
+     * Add Penalty for Team B
      */
     public void teamBPenalty(View v) {
         teamBPenalty = teamBPenalty + 1;
@@ -251,10 +193,72 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the Penalty TeamB.
+     * Displays the Penalty for Team B
      */
     public void teamBPenalty(int teamBPenalty) {
         teamBPenaltyText.setText(String.valueOf(teamBPenalty));
+    }
+
+    /**
+     * Add Yellow Card for Team A
+     */
+    public void yellowCardForTeamA(View v) {
+        yellowCardTeamA = yellowCardTeamA + 1;
+        yellowForTeamA(yellowCardTeamA);
+    }
+
+
+    /**
+     * Displays the given yellow card for Team A
+     */
+    public void yellowForTeamA(int yellowCardForTeamA) {
+        yellowForTeamAText.setText(String.valueOf(yellowCardForTeamA));
+    }
+
+
+    /**
+     * Add Yellow Card for Team B
+     */
+    public void yellowCardForTeamB(View v) {
+        yellowCardTeamB = yellowCardTeamB + 1;
+        yellowForTeamB(yellowCardTeamB);
+    }
+
+    /**
+     * Displays the given yellow card for Team B
+     */
+    public void yellowForTeamB(int yellowCardForTeamB) {
+        yellowForTeamBText.setText(String.valueOf(yellowCardForTeamB));
+    }
+
+    /**
+     * Add red card for Team A
+     */
+    public void redCardForTeamA(View v) {
+        redCardTeamA = redCardTeamA + 1;
+        redForTeamA(redCardTeamA);
+    }
+
+    /**
+     * Displays the given red card for Team A
+     */
+    public void redForTeamA(int redCardForTeamA) {
+        redForTeamAText.setText(String.valueOf(redCardForTeamA));
+    }
+
+    /**
+     * Add red card for Team B
+     */
+    public void redCardForTeamB(View v) {
+        redCardTeamB = redCardTeamB + 1;
+        redCardForTeamB(redCardTeamB);
+    }
+
+    /**
+     * Displays the given red card for Team B
+     */
+    public void redCardForTeamB(int redCardForTeamB) {
+        redCardForTeamBText.setText(String.valueOf(redCardForTeamB));
     }
 
 
