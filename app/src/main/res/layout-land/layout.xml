@@ -13,7 +13,7 @@
     <RelativeLayout
 
 
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -22,7 +22,7 @@
             android:contentDescription="@string/image"
             android:scaleType="centerCrop"
             android:scaleY="1"
-            android:src="@drawable/fball" />
+            android:src="@drawable/fball"/>
 
 
         <LinearLayout
@@ -51,7 +51,6 @@
                     android:background="@drawable/bg1"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:hint="@string/teamA"
                     android:text="@string/teamA"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/text_size_score" />
@@ -199,28 +198,28 @@
 
         <RelativeLayout
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true">
-
-        </RelativeLayout>
-
-        <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/marginBottom"
-            android:layout_marginTop="26dp"
-            android:onClick="resetScore"
-            android:text="@string/reset" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/marginBottom"
+                android:layout_marginTop="@dimen/margin_26"
+                android:onClick="resetScore"
+                android:scaleY="1"
+                android:text="@string/reset" />
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
 
+
 </ScrollView>
-
-
