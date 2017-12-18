@@ -7,9 +7,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    //declare a final static variable for key
-
     public static final String KEY_goalsTeamA = "goalsTeamA";
     public static final String KEY_goalsTeamB = "goalsTeamB";
     public static final String KEY_teamAPenalty = "teamAPenalty";
@@ -19,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String KEY_redCardTeamA = "redCardTeamA";
     public static final String KEY_redCardTeamB = "redCardTeamB";
 
+    //declare a final static variable for key
     /**
      * Define a String Variable for User Input
      */
@@ -30,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
     int yellowCardTeamB = 0;
     int redCardTeamA = 0;
     int redCardTeamB = 0;
-
-
     //use that key while saving the data to savedInstance
     private TextView goalsTeamAText;
     private TextView goalsTeamBText;
