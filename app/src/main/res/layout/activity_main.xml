@@ -213,7 +213,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/marginBottom"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="@dimen/margin_26"
             android:onClick="resetScore"
             android:scaleY="1"
             android:text="@string/reset" />

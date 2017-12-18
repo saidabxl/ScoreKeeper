@@ -15,4 +15,5 @@
     <dimen name="text_size_fouls">12sp</dimen>
     <dimen name="text_size_fouls_score">30sp</dimen>
     <dimen name="mar_top">16dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
 </resources>
