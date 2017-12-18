@@ -65,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
         int redCardTeamA = savedInstanceState.getInt(KEY_redCardTeamA);
         int redCardTeamB = savedInstanceState.getInt(KEY_redCardTeamB);
 
-        displayForTeamA (goalsTeamA);
-        displayForTeamB(goalsTeamB);
-        yellowForTeamA(yellowCardTeamA);
-        yellowForTeamB(yellowCardTeamB);
-        redForTeamA(redCardTeamA);
-        redCardForTeamB(redCardTeamB);
-        teamAPenalty(teamAPenalty);
-        teamBPenalty(teamBPenalty);
+        displayForTeamA(0);
+        displayForTeamB(0);
+        yellowForTeamA(0);
+        yellowForTeamB(0);
+        redForTeamA(0);
+        redCardForTeamB(0);
+        teamAPenalty(0);
+        teamBPenalty(0);
 
     }
 
@@ -229,10 +229,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Reset all score
+     * Reset all scores to 0
      */
 
     public void resetScore(View v) {
+
         goalsTeamA = 0;
         goalsTeamB = 0;
         teamAPenalty = 0;
