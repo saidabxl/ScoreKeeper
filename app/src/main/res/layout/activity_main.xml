@@ -22,7 +22,7 @@
             android:contentDescription="@string/image"
             android:scaleType="centerCrop"
             android:scaleY="1"
-            android:src="@drawable/fball" />
+            android:src="@drawable/fball"/>
 
 
         <LinearLayout
@@ -223,5 +223,3 @@
 
 
 </ScrollView>
-
-
