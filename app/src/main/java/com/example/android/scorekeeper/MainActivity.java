@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
         int redCardTeamA = savedInstanceState.getInt(KEY_redCardTeamA);
         int redCardTeamB = savedInstanceState.getInt(KEY_redCardTeamB);
 
-        goalsTeamA = (0);
-        goalsTeamB = (0);
+        displayForTeamA(0);
+        displayForTeamB(0);
         yellowForTeamA(0);
         yellowForTeamB(0);
         redForTeamA(0);
@@ -242,8 +242,8 @@ public class MainActivity extends AppCompatActivity {
         redCardTeamA = 0;
         redCardTeamB = 0;
 
-        goalsTeamA = 0;
-        goalsTeamB = 0;
+        displayForTeamA(0);
+        displayForTeamB(0);
         yellowForTeamA(0);
         yellowForTeamB(0);
         redForTeamA(0);
