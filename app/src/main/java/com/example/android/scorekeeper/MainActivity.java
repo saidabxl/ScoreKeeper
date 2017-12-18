@@ -121,8 +121,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         goalsTeamAText = findViewById(R.id.team_a_goal);
         goalsTeamBText = findViewById(R.id.team_b_goal);
         teamAPenaltyText = findViewById(R.id.team_a_penalty);
@@ -134,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
     /**
      * Add score for Team A
