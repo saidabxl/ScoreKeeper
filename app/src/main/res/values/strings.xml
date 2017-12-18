@@ -2,8 +2,8 @@
     <string name="app_name">Score Keeper</string>
     <string name="teamA">Team A</string>
     <string name="teamB">Team B</string>
-    <string name="scoreTeamA">3</string>
-    <string name="scoreTeamB">2</string>
+    <string name="scoreTeamA">0</string>
+    <string name="scoreTeamB">0</string>
     <string name="goalsTeamA">Goals</string>
     <string name="goalsTeamB">Goals</string>
     <string name="YCA">Y.Card</string>

@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Define a String Variable for User Input
      */
-    int goalsTeamA = 3;
-    int goalsTeamB = 2;
+    int goalsTeamA = 0;
+    int goalsTeamB = 0;
     int teamAPenalty = 0;
     int teamBPenalty = 0;
     int yellowCardTeamA = 0;
@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
     //declare a final static variable for key
 
 
-    public static String KEY_goalsTeamA;
-    public static String KEY_goalsTeamB;
-    public static String KEY_teamAPenalty ;
-    public static String KEY_teamBPenalty;
-    public static String KEY_yellowCardTeamA;
-    public static String KEY_yellowCardTeamB;
-    public static String KEY_redCardTeamA;
-    public static String KEY_redCardTeamB;
+    public static final String KEY_goalsTeamA = "goalsTeamA";
+    public static final String KEY_goalsTeamB = "goalsTeamB";
+    public static final String KEY_teamAPenalty = "teamAPenalty";
+    public static final String KEY_teamBPenalty = "teamBPenalty";
+    public static final String KEY_yellowCardTeamA = "yellowCardTeamA";
+    public static final String KEY_yellowCardTeamB = "yellowCardTeamB";
+    public static final String KEY_redCardTeamA = "redCardTeamA";
+    public static final String KEY_redCardTeamB = "redCardTeamB";
 
     //use that key while saving the data to savedInstance
 
@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
         int redCardTeamA = savedInstanceState.getInt(KEY_redCardTeamA);
         int redCardTeamB = savedInstanceState.getInt(KEY_redCardTeamB);
 
-        displayForTeamA(3);
-        displayForTeamB(2);
+        goalsTeamA = (0);
+        goalsTeamB = (0);
         yellowForTeamA(0);
         yellowForTeamB(0);
         redForTeamA(0);
@@ -233,8 +233,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void resetScore(View v) {
-        goalsTeamA = 3;
-        goalsTeamB = 2;
+        goalsTeamA = 0;
+        goalsTeamB = 0;
         teamAPenalty = 0;
         teamBPenalty = 0;
         yellowCardTeamA = 0;
@@ -242,14 +242,15 @@ public class MainActivity extends AppCompatActivity {
         redCardTeamA = 0;
         redCardTeamB = 0;
 
-        displayForTeamA(3);
-        displayForTeamB(2);
+        goalsTeamA = 0;
+        goalsTeamB = 0;
         yellowForTeamA(0);
         yellowForTeamB(0);
         redForTeamA(0);
         redCardForTeamB(0);
         teamAPenalty(0);
         teamBPenalty(0);
+
 
 
     }
