@@ -3,7 +3,7 @@
     <dimen name="margin_padding_16">16dp</dimen>
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_8">8dp</dimen>
-    <dimen name="marginTop">8dp</dimen>
+    <dimen name="marginTop">4dp</dimen>
     <dimen name="marginLeft">24dp</dimen>
     <dimen name="width_line">2dp</dimen>
     <dimen name="marginRight">24dp</dimen>
