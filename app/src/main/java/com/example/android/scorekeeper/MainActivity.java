@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
     //declare a final static variable for key
 
 
-    public static final String KEY_goalsTeamA = "goalsTeamA";
-    public static final String KEY_goalsTeamB = "goalsTeamB";
-    public static final String KEY_teamAPenalty = "teamAPenalty";
-    public static final String KEY_teamBPenalty = "teamBPenalty";
-    public static final String KEY_yellowCardTeamA = "yellowCardTeamA";
-    public static final String KEY_yellowCardTeamB = "yellowCardTeamB";
-    public static final String KEY_redCardTeamA = "redCardTeamA";
-    public static final String KEY_redCardTeamB = "redCardTeamB";
+    public static final String KEY_goalsTeamA = "KEY_goalsTeamA";
+    public static final String KEY_goalsTeamB = "KEY_goalsTeamB";
+    public static final String KEY_teamAPenalty = "KEY_teamAPenalty";
+    public static final String KEY_teamBPenalty = "KEY_teamBPenalty";
+    public static final String KEY_yellowCardTeamA = "KEY_yellowCardTeamA";
+    public static final String KEY_yellowCardTeamB = "KEY_yellowCardTeamB";
+    public static final String KEY_redCardTeamA = "KEY_redCardTeamA";
+    public static final String KEY_redCardTeamB = "KEY_redCardTeamB";
 
     //use that key while saving the data to savedInstance
 
