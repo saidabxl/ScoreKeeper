@@ -7,49 +7,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String KEY_goalsTeamA;
-    public static final String KEY_goalsTeamB;
-    public static final String KEY_teamAPenalty;
-    public static final String KEY_teamBPenalty;
-    public static final String KEY_yellowCardTeamA;
-    public static final String KEY_yellowCardTeamB;
-    public static final String KEY_redCardTeamA;
-    public static final String KEY_redCardTeamB;
 
-
-    //declare a final static variable for key
-
-    static {
-        KEY_goalsTeamA = "goalsTeamA";
-    }
-
-    static {
-        KEY_goalsTeamB = "goalsTeamB";
-    }
-
-    static {
-        KEY_teamAPenalty = "teamAPenalty";
-    }
-
-    static {
-        KEY_teamBPenalty = "teamBPenalty";
-    }
-
-    static {
-        KEY_yellowCardTeamA = "yellowCardTeamA";
-    }
-
-    static {
-        KEY_yellowCardTeamB = "yellowCardTeamB";
-    }
-
-    static {
-        KEY_redCardTeamA = "redCardTeamA";
-    }
-
-    static {
-        KEY_redCardTeamB = "redCardTeamB";
-    }
 
     /**
      * Define a String Variable for User Input
@@ -65,20 +23,31 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    //declare a final static variable for key
+
+
+    public static String KEY_goalsTeamA;
+    public static String KEY_goalsTeamB;
+    public static String KEY_teamAPenalty ;
+    public static String KEY_teamBPenalty;
+    public static String KEY_yellowCardTeamA;
+    public static String KEY_yellowCardTeamB;
+    public static String KEY_redCardTeamA;
+    public static String KEY_redCardTeamB;
 
     //use that key while saving the data to savedInstance
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt("goalsTeamA", goalsTeamA);
-        savedInstanceState.putInt("goalsTeamB", goalsTeamB);
-        savedInstanceState.putInt("teamAPenalty", teamAPenalty);
-        savedInstanceState.putInt("teamBPenalty", teamBPenalty);
-        savedInstanceState.putInt("yellowCardTeamA", yellowCardTeamA);
-        savedInstanceState.putInt("yellowCardTeamB", yellowCardTeamB);
-        savedInstanceState.putInt("redCardTeamA", redCardTeamA);
-        savedInstanceState.putInt("redCardTeamB", redCardTeamB);
+        savedInstanceState.putInt(KEY_goalsTeamA, goalsTeamA);
+        savedInstanceState.putInt(KEY_goalsTeamB, goalsTeamB);
+        savedInstanceState.putInt(KEY_teamAPenalty, teamAPenalty);
+        savedInstanceState.putInt(KEY_teamBPenalty, teamBPenalty);
+        savedInstanceState.putInt(KEY_yellowCardTeamA, yellowCardTeamA);
+        savedInstanceState.putInt(KEY_yellowCardTeamB, yellowCardTeamB);
+        savedInstanceState.putInt(KEY_redCardTeamA, redCardTeamA);
+        savedInstanceState.putInt(KEY_redCardTeamB, redCardTeamB);
     }
 
 
@@ -87,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        int goalsTeamA = savedInstanceState.getInt("goalsTeamA");
-        int goalsTeamB = savedInstanceState.getInt("goalsTeamB");
-        int teamAPenalty = savedInstanceState.getInt("teamAPenalty");
-        int teamBPenalty = savedInstanceState.getInt("teamBPenalty");
-        int yellowCardTeamA = savedInstanceState.getInt("yellowCardTeamA");
-        int yellowCardTeamB = savedInstanceState.getInt("yellowCardTeamB");
-        int redCardTeamA = savedInstanceState.getInt("redCardTeamA");
-        int redCardTeamB = savedInstanceState.getInt("redCardTeamB");
+        int goalsTeamA = savedInstanceState.getInt(KEY_goalsTeamA);
+        int goalsTeamB = savedInstanceState.getInt(KEY_goalsTeamB);
+        int teamAPenalty = savedInstanceState.getInt(KEY_teamBPenalty);
+        int teamBPenalty = savedInstanceState.getInt(KEY_teamBPenalty);
+        int yellowCardTeamA = savedInstanceState.getInt(KEY_yellowCardTeamA);
+        int yellowCardTeamB = savedInstanceState.getInt(KEY_yellowCardTeamB);
+        int redCardTeamA = savedInstanceState.getInt(KEY_redCardTeamA);
+        int redCardTeamB = savedInstanceState.getInt(KEY_redCardTeamB);
 
         displayForTeamA(3);
         displayForTeamB(2);
