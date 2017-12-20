@@ -4,8 +4,8 @@
     <string name="teamB">Team B</string>
     <string name="scoreTeamA">0</string>
     <string name="scoreTeamB">0</string>
-    <string name="goalsTeamA">Goals</string>
-    <string name="goalsTeamB">Goals</string>
+    <string name="goalsTeamA">Goal</string>
+    <string name="goalsTeamB">Goal</string>
     <string name="YCA">Y.Card</string>
     <string name="YCB">Y.Card</string>
     <string name="RCA">Red Card</string>
