@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -75,7 +74,7 @@
                     android:onClick="goalsTeamA"
                     android:text="@string/goalsTeamA"
                     android:textColor="@color/colorPrimary"
-                    android:drawableLeft="@drawable/football"/>
+                    />
 
                 <Button
                     android:id="@+id/team_a_penalty"
@@ -159,8 +158,7 @@
                     android:background="@color/back"
                     android:onClick="goalForTeamB"
                     android:text="@string/goalsTeamB"
-                    android:textColor="@color/text2"
-                    android:drawableLeft="@drawable/football"/>
+                    android:textColor="@color/text2" />
 
                 <Button
                     android:id="@+id/team_b_penalty"
