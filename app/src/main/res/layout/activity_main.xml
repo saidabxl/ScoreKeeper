@@ -13,8 +13,8 @@
 
         <ImageView
             style="@style/imageview"
-            android:src="@drawable/fball"
-            android:contentDescription="@string/image"/>
+            android:contentDescription="@string/image"
+            android:src="@drawable/fball" />
 
         <LinearLayout style="@style/LinearLayout">
 

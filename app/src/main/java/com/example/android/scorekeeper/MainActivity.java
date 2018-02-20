@@ -3,11 +3,11 @@ package com.example.android.scorekeeper;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-
 public class MainActivity extends AppCompatActivity {
 
+
+    //declare a final static variable for key
 
     public static final String KEY_goalsTeamA = "KEY_goalsTeamA";
     public static final String KEY_goalsTeamB = "KEY_goalsTeamB";
@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String KEY_redCardTeamA = "KEY_redCardTeamA";
     public static final String KEY_redCardTeamB = "KEY_redCardTeamB";
 
-
-    //declare a final static variable for key
     /**
      * Define a String Variable for User Input
      */
@@ -32,19 +30,8 @@ public class MainActivity extends AppCompatActivity {
     int redCardTeamA = 0;
     int redCardTeamB = 0;
 
+
     //use that key while saving the data to savedInstance
-    TextView goalsTeamAText;
-
-
-    //use the same key to retrieve the data back
-    TextView goalsTeamBText;
-    Button teamAPenaltyText;
-    TextView teamBPenaltyText;
-    TextView yellowForTeamAText;
-    TextView yellowForTeamBText;
-    TextView redForTeamAText;
-    TextView redCardForTeamBText;
-
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -78,14 +65,26 @@ public class MainActivity extends AppCompatActivity {
         redCardForTeamB(0);
         teamAPenalty(0);
         teamBPenalty(0);
-
-
     }
+
+    //use the same key to retrieve the data back
+
+    TextView goalsTeamAText;
+    TextView goalsTeamBText;
+    TextView teamAPenaltyText;
+    TextView teamBPenaltyText;
+    TextView yellowForTeamAText;
+    TextView yellowForTeamBText;
+    TextView redForTeamAText;
+    TextView redCardForTeamBText;
+
+    // Find these when Id views are needed
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         goalsTeamAText = findViewById(R.id.team_a_goal);
         goalsTeamBText = findViewById(R.id.team_b_goal);
         teamAPenaltyText = findViewById(R.id.team_a_penalty);
@@ -94,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         yellowForTeamBText = findViewById(R.id.team_b_yellow_card);
         redForTeamAText = findViewById(R.id.team_a_red_card);
         redCardForTeamBText = findViewById(R.id.team_b_red_card);
-
 
     }
 
@@ -138,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         teamAPenalty(teamAPenalty);
     }
 
-
     /**
      * Displays the Penalty for Team A
      */
@@ -169,14 +166,12 @@ public class MainActivity extends AppCompatActivity {
         yellowForTeamA(yellowCardTeamA);
     }
 
-
     /**
      * Displays the given yellow card for Team A
      */
     public void yellowForTeamA(int yellowCardForTeamA) {
         yellowForTeamAText.setText(String.valueOf(yellowCardForTeamA));
     }
-
 
     /**
      * Add Yellow Card for Team B
