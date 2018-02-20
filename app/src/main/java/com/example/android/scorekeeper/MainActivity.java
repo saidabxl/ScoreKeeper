@@ -3,12 +3,23 @@ package com.example.android.scorekeeper;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
 
+    public static final String KEY_goalsTeamA = "KEY_goalsTeamA";
+    public static final String KEY_goalsTeamB = "KEY_goalsTeamB";
+    public static final String KEY_teamAPenalty = "KEY_teamAPenalty";
+    public static final String KEY_teamBPenalty = "KEY_teamBPenalty";
+    public static final String KEY_yellowCardTeamA = "KEY_yellowCardTeamA";
+    public static final String KEY_yellowCardTeamB = "KEY_yellowCardTeamB";
+    public static final String KEY_redCardTeamA = "KEY_redCardTeamA";
+    public static final String KEY_redCardTeamB = "KEY_redCardTeamB";
 
+
+    //declare a final static variable for key
     /**
      * Define a String Variable for User Input
      */
@@ -21,21 +32,18 @@ public class MainActivity extends AppCompatActivity {
     int redCardTeamA = 0;
     int redCardTeamB = 0;
 
-
-
-    //declare a final static variable for key
-
-
-    public static final String KEY_goalsTeamA = "KEY_goalsTeamA";
-    public static final String KEY_goalsTeamB = "KEY_goalsTeamB";
-    public static final String KEY_teamAPenalty = "KEY_teamAPenalty";
-    public static final String KEY_teamBPenalty = "KEY_teamBPenalty";
-    public static final String KEY_yellowCardTeamA = "KEY_yellowCardTeamA";
-    public static final String KEY_yellowCardTeamB = "KEY_yellowCardTeamB";
-    public static final String KEY_redCardTeamA = "KEY_redCardTeamA";
-    public static final String KEY_redCardTeamB = "KEY_redCardTeamB";
-
     //use that key while saving the data to savedInstance
+    TextView goalsTeamAText;
+
+
+    //use the same key to retrieve the data back
+    TextView goalsTeamBText;
+    Button teamAPenaltyText;
+    TextView teamBPenaltyText;
+    TextView yellowForTeamAText;
+    TextView yellowForTeamBText;
+    TextView redForTeamAText;
+    TextView redCardForTeamBText;
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -50,9 +58,6 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt(KEY_redCardTeamB, redCardTeamB);
     }
 
-
-    //use the same key to retrieve the data back
-
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -65,26 +70,17 @@ public class MainActivity extends AppCompatActivity {
         int redCardTeamA = savedInstanceState.getInt(KEY_redCardTeamA);
         int redCardTeamB = savedInstanceState.getInt(KEY_redCardTeamB);
 
-        displayForTeamA(goalsTeamA);
-        displayForTeamB(goalsTeamB);
-        yellowForTeamA(yellowCardTeamA);
-        yellowForTeamB(yellowCardTeamB);
-        redForTeamA(redCardTeamA);
-        redCardForTeamB(redCardTeamB);
-        teamAPenalty(teamAPenalty);
-        teamBPenalty(teamBPenalty);
+        displayForTeamA(0);
+        displayForTeamB(0);
+        yellowForTeamA(0);
+        yellowForTeamB(0);
+        redForTeamA(0);
+        redCardForTeamB(0);
+        teamAPenalty(0);
+        teamBPenalty(0);
+
 
     }
-
-
-    TextView goalsTeamAText;
-    TextView goalsTeamBText;
-    TextView teamAPenaltyText;
-    TextView teamBPenaltyText;
-    TextView yellowForTeamAText;
-    TextView yellowForTeamBText;
-    TextView redForTeamAText;
-    TextView redCardForTeamBText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -251,7 +247,6 @@ public class MainActivity extends AppCompatActivity {
         redCardForTeamB(0);
         teamAPenalty(0);
         teamBPenalty(0);
-
 
 
     }
