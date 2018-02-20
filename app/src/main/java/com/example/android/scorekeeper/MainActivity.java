@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
 
     //declare a final static variable for key
 
@@ -30,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
     int redCardTeamA = 0;
     int redCardTeamB = 0;
 
+    //use the same key to retrieve the data back
+
+    TextView goalsTeamAText;
+    TextView goalsTeamBText;
+    TextView teamAPenaltyText;
+    TextView teamBPenaltyText;
+    TextView yellowForTeamAText;
+    TextView yellowForTeamBText;
+    TextView redForTeamAText;
+    TextView redCardForTeamBText;
 
     //use that key while saving the data to savedInstance
     @Override
@@ -66,17 +76,6 @@ public class MainActivity extends AppCompatActivity {
         teamAPenalty(0);
         teamBPenalty(0);
     }
-
-    //use the same key to retrieve the data back
-
-    TextView goalsTeamAText;
-    TextView goalsTeamBText;
-    TextView teamAPenaltyText;
-    TextView teamBPenaltyText;
-    TextView yellowForTeamAText;
-    TextView yellowForTeamBText;
-    TextView redForTeamAText;
-    TextView redCardForTeamBText;
 
     // Find these when Id views are needed
 
@@ -217,7 +216,6 @@ public class MainActivity extends AppCompatActivity {
     public void redCardForTeamB(int redCardForTeamB) {
         redCardForTeamBText.setText(String.valueOf(redCardForTeamB));
     }
-
 
     /**
      * Reset all scores to 0
