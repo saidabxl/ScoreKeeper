@@ -95,9 +95,7 @@
                     android:text="@string/RCB" />
             </LinearLayout>
 
-
         </LinearLayout>
-
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
