@@ -8,6 +8,7 @@
     <dimen name="width_line">2dp</dimen>
     <dimen name="marginRight">24dp</dimen>
     <dimen name="marginBottom">26dp</dimen>
+    <dimen name="marginBottom2">8dp</dimen>
     <dimen name="empty">0dp</dimen>
     <dimen name="text_size_team_name">21sp</dimen>
     <dimen name="text_size_score">21sp</dimen>
