@@ -84,14 +84,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        goalsTeamAText = findViewById(R.id.team_a_goal);
-        goalsTeamBText = findViewById(R.id.team_b_goal);
-        teamAPenaltyText = findViewById(R.id.team_a_penalty);
-        teamBPenaltyText = findViewById(R.id.team_b_penalty);
-        yellowForTeamAText = findViewById(R.id.team_a_yellow_card);
-        yellowForTeamBText = findViewById(R.id.team_b_yellow_card);
-        redForTeamAText = findViewById(R.id.team_a_red_card);
-        redCardForTeamBText = findViewById(R.id.team_b_red_card);
+        goalsTeamAText = (TextView) findViewById(R.id.team_a_goal);
+        goalsTeamBText =  (TextView) findViewById(R.id.team_b_goal);
+        teamAPenaltyText = (TextView) findViewById(R.id.team_a_penalty);
+        teamBPenaltyText = (TextView) findViewById(R.id.team_b_penalty);
+        yellowForTeamAText = (TextView) findViewById(R.id.team_a_yellow_card);
+        yellowForTeamBText = (TextView) findViewById(R.id.team_b_yellow_card);
+        redForTeamAText =    (TextView) findViewById(R.id.team_a_red_card);
+        redCardForTeamBText = (TextView) findViewById(R.id.team_b_red_card);
 
     }
 
